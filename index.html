@@ -10,14 +10,34 @@ Yassarchive
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
+		    <header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>Welcome to my world of ideas and creativity </strong>, — I’m Yasmine, and this is where vision meets expression<br />
-					<br />
-					Site & portfolio developed by <a href="http://html5up.net">Yasmine</a>.</h1>
+					<a href="#" class="image avatar">
+						<img src="images/avatar.jpg" alt="" />
+					</a>
+					<h1 class="fade-in-text">
+						<strong>Welcome to my world of ideas and creativity</strong> — I’m Yasmine, where vision meets expression.
+						<br><br>
+						Site & portfolio developed by <a href="http://html5up.net">Yasmine</a>.
+					</h1>
 				</div>
 			</header>
+<style>
+/* Fade-in effect */
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 
 		<!-- Main -->
 			<div id="main">
@@ -441,6 +461,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</body>
 
 </html>
+
 
 
 
