@@ -1,14 +1,5 @@
-Strata by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Hi, I’m Yasmine, a 25-year-old IT specialist with a passion for leveraging technology to solve complex problems and drive innovation. Over the years, I have honed my skills in various areas of information technology, including software development, system architecture, and network management. This portfolio reflects not only the projects I’ve undertaken but also my commitment to continuous learning and excellence in the ever-evolving tech landscape. I invite you to explore my work and see how I combine technical expertise with creative problem-solving to deliver impactful solutions. Feel free to connect—I’m always eager to collaborate and push the boundaries of what technology can achieve.
 
-
-A simple, minimalist template that actually began life as an unused redesign of my
-personal site. Includes a (configurable) parallax background effect, Poptrox-powered
-lightbox gallery, a bunch of pre-styled elements, and Sass sources for the Sass-inclined.
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
 
 (* = Not included)
 
@@ -30,4 +21,5 @@ Credits:
 
 	Other:
 		jQuery (jquery.com)
+
 		Responsive Tools (github.com/ajlkn/responsive-tools)
