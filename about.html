@@ -77,6 +77,11 @@
     #about::before,
     #about::after { content: none !important; }
 
+    /* Remove any template background/shape from the main container on this page */
+    #main { background: none !important; }
+    #main::before,
+    #main::after { content: none !important; }
+
     /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce){
       body{ transition:none !important; }
@@ -142,7 +147,6 @@
   </script>
 </body>
 </html>
-
 
 
 
