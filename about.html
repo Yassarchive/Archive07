@@ -77,10 +77,20 @@
     #about::before,
     #about::after { content: none !important; }
 
-    /* Remove any template background/shape from the main container on this page */
-    #main { background: none !important; }
-    #main::before,
-    #main::after { content: none !important; }
+    /* Remove bg.jpg on this page only (scoped by .about-page on <body>) */
+    .about-page,
+    .about-page #main {
+      background: none !important;
+      background-image: none !important;
+    }
+    .about-page::before,
+    .about-page::after,
+    .about-page #main::before,
+    .about-page #main::after {
+      content: none !important;
+      background: none !important;
+      background-image: none !important;
+    }
 
     /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce){
@@ -90,7 +100,9 @@
     }
   </style>
 </head>
-<body>
+
+<!-- add page scope class here -->
+<body class="about-page">
 
   <header id="header">
     <div class="inner">
@@ -147,6 +159,7 @@
   </script>
 </body>
 </html>
+
 
 
 
