@@ -64,13 +64,18 @@
     #about{ max-width: 900px; margin: 0 auto; }
     #about p{ line-height: 1.8; font-size: 1.05rem; margin: 1rem 0; }
 
-    /* Handwritten highlight option (use for your name if you want) */
+    /* Handwritten highlight option */
     .mark {
       font-family: "Homemade Apple", "Caveat", cursive;
       color: var(--orange);
       background: linear-gradient(transparent 60%, rgba(255,122,0,.18) 60%);
       padding: 0 .15em;
     }
+
+    /* Remove any template background/shape only on the About section */
+    #about { background: none !important; }
+    #about::before,
+    #about::after { content: none !important; }
 
     /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce){
@@ -93,7 +98,7 @@
       <!-- Typewriter title; text typed via JS -->
       <h1 class="type caret" id="typeTarget" aria-label="About Me — Yasmine"></h1>
 
-      <!-- Add reveal classes to paragraphs for scroll-in -->
+      <!-- Content -->
       <p class="reveal">I’m <span class="mark">Yasmine</span>, a 25-year-old IT specialist whose fascination with technology began early in childhood. Growing up, I was captivated not only by the magic of programming and software but also by the intricate physical components of computers and devices. This dual interest in both software and hardware has shaped my approach to IT — I believe in understanding technology inside and out, combining coding skills with hands-on experience to create comprehensive solutions.</p>
 
       <p class="reveal">While programming challenges and logical problem-solving fuel my curiosity, I equally enjoy working directly with hardware — building, troubleshooting, and optimizing systems. This balance allows me to bridge the gap between abstract code and tangible technology, giving me a unique perspective and skill set in the IT field. I created this website as a portfolio to showcase my passion for computer science and to document the projects and experiences that have contributed to my growth.</p>
@@ -133,7 +138,6 @@
         }
       });
     }, { threshold: 0.12 });
-
     document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
   </script>
 </body>
