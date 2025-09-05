@@ -46,7 +46,7 @@
 
     /* Typewriter title */
     h1.type {
-      color: var(--text); /* make text white */
+      color: var(--text);
       font-family: "Times New Roman Condensed", serif;
       font-weight: 650;
       white-space: nowrap; overflow: hidden;
@@ -82,77 +82,57 @@
     #main::before,
     #main::after { content: none !important; }
 
-    /* Respect reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      body{ transition:none !important; }
-      .reveal{ transition:none !important; transform:none !important; opacity:1 !important; }
-      h1.type{ border-right: none !important; }
+    /* ===== Projects Slider (scoped) ===== */
+    #projects-slider{ max-width: 1100px; margin: 2.5rem auto 0; }
+    #projects-slider .slider {
+      position: relative;
+      overflow: hidden;
+      border-top: solid 2px #efefef;
+      padding-top: 2rem;
     }
-  </style>
-</head>
-<body>
+    #projects-slider .slides {
+      display: flex;
+      transition: transform 0.4s ease;
+      will-change: transform;
+    }
+    #projects-slider .slide {
+      flex: 0 0 100%;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      text-align: left;
+    }
+    #projects-slider .work-item .image { margin: 0 0 1rem 0; }
+    #projects-slider h3 { margin-bottom: 0.4rem; }
 
-  <header id="header">
-    <div class="inner">
-      <a href="index.html" class="button">Back to Home</a>
-    </div>
-  </header>
+    /* Arrows */
+    #projects-slider .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 0;
+      background: rgba(20, 28, 44, 0.6);
+      color: #fff !important;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      cursor: pointer;
+      line-height: 2.25rem;
+      text-align: center;
+      font-size: 1.25rem;
+      user-select: none;
+    }
+    #projects-slider .nav:hover { background: rgba(20, 28, 44, 0.9); }
+    #projects-slider .nav.prev { left: 0.5rem; }
+    #projects-slider .nav.next { right: 0.5rem; }
 
-  <main id="main">
-    <section id="about" class="section-glow">
-      <!-- Typewriter title; text typed via JS -->
-      <h1 class="type caret" id="typeTarget" aria-label="Python programming"></h1>
+    /* Dots */
+    #projects-slider .dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1rem 0 0;
+    }
+    #projects-slider .dots button {
+      width: 9px; height: 9px;
+      bo
 
-      <!-- Content -->
-      <p class="reveal">  
-    Python is one of the most versatile languages in my toolkit, and I use it to transform ideas into practical solutions. 
-    Its clean syntax and powerful libraries make it ideal for everything from <strong>automation scripts</strong> 
-    to <strong>data analysis</strong> and <strong>game development</strong>.
-  </p>
-
-  <p>
-    I have developed projects that showcase Python’s flexibility: building automation tools to simplify repetitive tasks, 
-    experimenting with <strong>algorithms and data structures</strong> to strengthen my computer science foundations, 
-    and designing interactive games to explore logic and user experience. I’ve also worked with frameworks such as 
-    <strong>Django</strong> for web development and explored Python’s role in <strong>IoT projects</strong> 
-    through its integration with hardware like <strong>Raspberry Pi</strong>.
-  </p>
-
-  <p>
-    What excites me most about Python is its ability to bridge different domains — from software engineering to hardware prototyping — 
-    and its strong community support. Whether it’s creating efficient programs, handling data, or connecting hardware and software, 
-    Python remains a central part of how I bring projects to life. <p/>
-    </section>
-  </main>
-
-  <!-- Tiny, dependency-free JS -->
-  <script>
-    // Page fade-in
-    window.addEventListener('load', ()=> document.body.classList.add('ready'));
-
-    // Typewriter effect for H1
-    (function(){
-      const text = "Python programming";
-      const el = document.getElementById('typeTarget');
-      let i = 0;
-      function type(){
-        el.textContent = text.slice(0, ++i);
-        if(i < text.length) setTimeout(type, 60);
-        else el.classList.add('caret'); // keep blinking caret
-      }
-      type();
-    })();
-
-    // Scroll reveal for paragraphs
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-  </script>
-</body>
-</html>
