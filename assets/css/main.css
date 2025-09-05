@@ -1,6 +1,7 @@
 /* Set Times New Roman for the entire site */
 * {
     font-family: "Times New Roman", Times, serif !important;
+	font-stretch: condensed !important; /* narrows it*/
 }
 
 html, body, div, span, applet, object,
