@@ -1,25 +1,34 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title> </title>
+  <title>Python Project</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
     :root{
-      --white:#ffffff !important;
-      --orange:#FCC979 !important;
-      --text:#000000 !important; 
+      --white:#ffffff;
+      --orange:#FCC979;
+      --text:#ffffff;
+      --bg:#0f172a;
     }
 
-    body{ opacity:0; transition:opacity .45s ease; background:var(--navy); color:var(--text); }
+    body{
+      opacity:0;
+      transition:opacity .45s ease;
+      background:var(--bg);
+      color:var(--text);
+    }
+
     body.ready{ opacity:1; }
 
     #header .button{
       transition: transform .18s ease, box-shadow .18s ease;
       border-color: rgba(255, 255, 255, 0.5);
+      color:white;
     }
+
     #header .button:hover{
       transform: translateY(-2px);
       box-shadow: 0 10px 24px rgba(0,0,0,.25), 0 0 0 1px rgba(255,122,0,.25) inset;
@@ -53,7 +62,7 @@
     }
 
     h1.type {
-      color: var(--text);
+      color: white;
       font-family: "Times New Roman Condensed", serif;
       font-weight: 650;
       white-space: nowrap;
@@ -81,8 +90,44 @@
       margin: 1rem 0;
     }
 
-    #about { background: none !important; }
-    #main { background: none !important; }
+    /* 🔥 PROJECT FIX */
+    #projects{
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .project-card{
+      background:#111827;
+      color:white;
+      padding:25px;
+      border-radius:14px;
+      max-width:750px;
+      width:100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    }
+
+    .buttons{
+      display:flex;
+      gap:12px;
+      margin-top:15px;
+      flex-wrap:wrap;
+    }
+
+    .buttons a{
+      padding:10px 14px;
+      background:#FCC979;
+      color:#000;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.2s;
+    }
+
+    .buttons a:hover{
+      transform: translateY(-2px);
+      opacity:0.9;
+    }
 
     @media (prefers-reduced-motion: reduce){
       body{ transition:none !important; }
@@ -106,23 +151,15 @@
       <h1 class="type caret" id="typeTarget"></h1>
 
       <p class="reveal">
-        Python is one of the most versatile languages in my toolkit, and I use it to transform ideas into practical solutions.
-        Its clean syntax and powerful libraries make it ideal for everything from <strong>automation scripts</strong>
-        to <strong>data analysis</strong> and <strong>game development</strong>.
+        Python is one of the most versatile languages in my toolkit...
       </p>
 
-      <p>
-        I have developed projects that showcase Python’s flexibility: building automation tools to simplify repetitive tasks,
-        experimenting with <strong>algorithms and data structures</strong> to strengthen my computer science foundations,
-        and designing interactive games to explore logic and user experience. I’ve also worked with frameworks such as
-        <strong>Django</strong> for web development and explored Python’s role in <strong>IoT projects</strong>
-        through Raspberry Pi.
+      <p class="reveal">
+        I have developed projects that showcase Python’s flexibility...
       </p>
 
-      <p>
-        What excites me most about Python is its ability to bridge different domains — from software engineering to hardware prototyping —
-        and its strong community support. Whether it’s creating efficient programs, handling data, or connecting hardware and software,
-        Python remains a central part of how I bring projects to life.
+      <p class="reveal">
+        What excites me most about Python is its ability to bridge different domains...
       </p>
 
     </section>
@@ -134,14 +171,13 @@
 
       <p>
         Een klassieke Snake-game gebouwd met Python en Pygame.
-        Dit project focust op game logic, collision detection en input handling.
       </p>
 
       <h3>🚀 Features</h3>
       <ul>
         <li>Besturing met pijltjestoetsen</li>
         <li>Score tracking</li>
-        <li>Snake groeit bij elke food pickup</li>
+        <li>Snake groeit bij food</li>
         <li>Game over bij collision</li>
       </ul>
 
