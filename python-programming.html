@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.css" />
 
-  <!-- Quick enhancement styles (can be moved into main.css) -->
   <style>
     :root{
       --white:#ffffff !important;
@@ -14,11 +13,9 @@
       --text:#000000 !important; 
     }
 
-    /* Page fade-in */
     body{ opacity:0; transition:opacity .45s ease; background:var(--navy); color:var(--text); }
     body.ready{ opacity:1; }
 
-    /* Back button hover polish */
     #header .button{
       transition: transform .18s ease, box-shadow .18s ease;
       border-color: rgba(255, 255, 255, 0.5);
@@ -28,61 +25,65 @@
       box-shadow: 0 10px 24px rgba(0,0,0,.25), 0 0 0 1px rgba(255,122,0,.25) inset;
     }
 
-    /* Section glow accents */
     #about.section-glow{ position:relative; overflow:hidden; }
+
     #about.section-glow::before,
     #about.section-glow::after{
       content:"";
-      position:absolute; border-radius:50%; filter: blur(90px); pointer-events:none;
+      position:absolute;
+      border-radius:50%;
+      filter: blur(90px);
+      pointer-events:none;
     }
+
     #about.section-glow::before{
-      width:420px; height:420px; top:-140px; right:-140px;
+      width:420px;
+      height:420px;
+      top:-140px;
+      right:-140px;
       background: radial-gradient(circle, rgba(255,122,0,.35), transparent 60%);
     }
+
     #about.section-glow::after{
-      width:360px; height:360px; bottom:-160px; left:-160px;
+      width:360px;
+      height:360px;
+      bottom:-160px;
+      left:-160px;
       background: radial-gradient(circle, rgba(28,42,87,.45), transparent 60%);
     }
 
-    /* Typewriter title */
     h1.type {
-      color: var(--text); /* make text white */
+      color: var(--text);
       font-family: "Times New Roman Condensed", serif;
       font-weight: 650;
-      white-space: nowrap; overflow: hidden;
+      white-space: nowrap;
+      overflow: hidden;
       border-right: 2px solid var(--orange);
     }
+
     @keyframes caret { 50% { border-color: transparent; } }
     h1.type.caret { animation: caret 1s steps(1) infinite; }
 
-    /* Scroll reveal */
-    .reveal { opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.in { opacity:1; transform: none; }
-
-    /* Nice readable width + spacing */
-    #main{ padding: 2.5rem 1.25rem; }
-    #about{ max-width: 900px; margin: 0 auto; }
-    #about p{ line-height: 1.8; font-size: 1.05rem; margin: 1rem 0; }
-
-    /* Handwritten highlight option */
-    .mark {
-      font-family: "Homemade Apple", "Caveat", cursive;
-      color: var(--orange);
-      background: linear-gradient(transparent 60%, rgba(255,122,0,.18) 60%);
-      padding: 0 .15em;
+    .reveal {
+      opacity:0;
+      transform: translateY(14px);
+      transition: opacity .6s ease, transform .6s ease;
     }
 
-    /* Remove any template background/shape only on the About section */
+    .reveal.in { opacity:1; transform:none; }
+
+    #main{ padding: 2.5rem 1.25rem; }
+    #about{ max-width: 900px; margin: 0 auto; }
+
+    #about p{
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin: 1rem 0;
+    }
+
     #about { background: none !important; }
-    #about::before,
-    #about::after { content: none !important; }
-
-    /* Remove any template background/shape from the main container on this page */
     #main { background: none !important; }
-    #main::before,
-    #main::after { content: none !important; }
 
-    /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce){
       body{ transition:none !important; }
       .reveal{ transition:none !important; transform:none !important; opacity:1 !important; }
@@ -90,6 +91,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header id="header">
@@ -100,82 +102,81 @@
 
   <main id="main">
     <section id="about" class="section-glow">
-      <!-- Typewriter title; text typed via JS -->
-      <h1 class="type caret" id="typeTarget" aria-label="Python programming"></h1>
 
-      <!-- Content -->
-      <p class="reveal">  
-    Python is one of the most versatile languages in my toolkit, and I use it to transform ideas into practical solutions. 
-    Its clean syntax and powerful libraries make it ideal for everything from <strong>automation scripts</strong> 
-    to <strong>data analysis</strong> and <strong>game development</strong>.
-  </p>
+      <h1 class="type caret" id="typeTarget"></h1>
 
-  <p>
-    I have developed projects that showcase Python’s flexibility: building automation tools to simplify repetitive tasks, 
-    experimenting with <strong>algorithms and data structures</strong> to strengthen my computer science foundations, 
-    and designing interactive games to explore logic and user experience. I’ve also worked with frameworks such as 
-    <strong>Django</strong> for web development and explored Python’s role in <strong>IoT projects</strong> 
-    through its integration with hardware like <strong>Raspberry Pi</strong>.
-  </p>
+      <p class="reveal">
+        Python is one of the most versatile languages in my toolkit, and I use it to transform ideas into practical solutions.
+        Its clean syntax and powerful libraries make it ideal for everything from <strong>automation scripts</strong>
+        to <strong>data analysis</strong> and <strong>game development</strong>.
+      </p>
 
-  <p>
-    What excites me most about Python is its ability to bridge different domains — from software engineering to hardware prototyping — 
-    and its strong community support. Whether it’s creating efficient programs, handling data, or connecting hardware and software, 
-    Python remains a central part of how I bring projects to life. <p/>
+      <p>
+        I have developed projects that showcase Python’s flexibility: building automation tools to simplify repetitive tasks,
+        experimenting with <strong>algorithms and data structures</strong> to strengthen my computer science foundations,
+        and designing interactive games to explore logic and user experience. I’ve also worked with frameworks such as
+        <strong>Django</strong> for web development and explored Python’s role in <strong>IoT projects</strong>
+        through Raspberry Pi.
+      </p>
+
+      <p>
+        What excites me most about Python is its ability to bridge different domains — from software engineering to hardware prototyping —
+        and its strong community support. Whether it’s creating efficient programs, handling data, or connecting hardware and software,
+        Python remains a central part of how I bring projects to life.
+      </p>
+
     </section>
   </main>
 
   <section id="projects">
-  <div class="project-card">
-    <h2>🐍 Snake Game (Python)</h2>
+    <div class="project-card">
+      <h2>🐍 Snake Game (Python)</h2>
 
-    <p>
-      Een klassieke Snake-game gebouwd met Python en Pygame. 
-      Dit project focust op game logic, collision detection en input handling.
-    </p>
+      <p>
+        Een klassieke Snake-game gebouwd met Python en Pygame.
+        Dit project focust op game logic, collision detection en input handling.
+      </p>
 
-    <h3>🚀 Features</h3>
-    <ul>
-      <li>Besturing met pijltjestoetsen</li>
-      <li>Score tracking</li>
-      <li>Snake groeit bij elke “food” pickup</li>
-      <li>Game over bij collision</li>
-    </ul>
+      <h3>🚀 Features</h3>
+      <ul>
+        <li>Besturing met pijltjestoetsen</li>
+        <li>Score tracking</li>
+        <li>Snake groeit bij elke food pickup</li>
+        <li>Game over bij collision</li>
+      </ul>
 
-    <h3>🛠️ Tech stack</h3>
-    <p>Python • Pygame</p>
+      <h3>🛠️ Tech stack</h3>
+      <p>Python • Pygame</p>
 
-    <div class="buttons">
-      <a href="https://github.com/Yassarchive/snake_game_python" target="_blank">
-        🔗 View Code
-      </a>
+      <div class="buttons">
+        <a href="https://github.com/Yassarchive/snake_game_python" target="_blank">
+          🔗 View Code
+        </a>
 
-      <a href="https://github.com/Yassarchive/snake_game_python/releases/download/v1.0/snake_game.exe" target="_blank">
-        🎮 Download & Play
-      </a>
+        <a href="https://github.com/Yassarchive/snake_game_python/releases/download/v1.0/snake_game.exe" target="_blank">
+          🎮 Download & Play
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Tiny, dependency-free JS -->
   <script>
-    // Page fade-in
     window.addEventListener('load', ()=> document.body.classList.add('ready'));
 
-    // Typewriter effect for H1
     (function(){
       const text = "Python programming";
       const el = document.getElementById('typeTarget');
       let i = 0;
+
       function type(){
         el.textContent = text.slice(0, ++i);
         if(i < text.length) setTimeout(type, 60);
-        else el.classList.add('caret'); // keep blinking caret
+        else el.classList.add('caret');
       }
+
       type();
     })();
 
-    // Scroll reveal for paragraphs
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
         if(e.isIntersecting){
@@ -184,7 +185,9 @@
         }
       });
     }, { threshold: 0.12 });
+
     document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
   </script>
+
 </body>
 </html>
