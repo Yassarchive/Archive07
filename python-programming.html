@@ -19,30 +19,32 @@
     body {
       opacity: 0;
       transition: opacity .45s ease;
-      background-color: #141c2c !important; /* Forces the sidebar area to be dark */
-      color: var(--text);
+      background-color: #141c2c !important;
       margin: 0;
+      padding: 0;
+      overflow-x: hidden; 
     }
-
-    body.ready { opacity: 1; }
-
+    
     /* 3. MAIN CONTENT AREA - Pushed right by 35% */
     #main { 
       background: #FFFFFF; /* This is your white color */
-      margin-left: 35%;    /* Matches the width of the sidebar in main.css */
+      margin-left: 35%;
+      width: 65%;
       min-height: 50vh;    /* Takes up top half */
       padding: 5rem 3rem;
+      box-sizing: border-box;
     }
 
     /* 4. PROJECTS/GAME AREA - Also pushed right by 35% */
     #projects {
       margin-left: 35%;
-      background: #ebcd9d; /* Keeps the tan background consistent */
+      width: 65%;
+      background: #FFFFFF; /* Keeps the tan background consistent */
       padding: 2rem 0 5rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      box-sizing: border-box;
     }
 
     /* 5. SIDEBAR BUTTON STYLING */
