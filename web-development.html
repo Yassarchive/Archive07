@@ -99,42 +99,52 @@
   </header>
 
   <main id="main">
-    <section id="about" class="section-glow">
-      <!-- Typewriter title; text typed via JS -->
-      <h1 class="type caret" id="typeTarget" aria-label="Web development."></h1>
+  <section id="about" class="section-glow">
+    <h1 class="type caret" id="typeTarget" aria-label="Web development."></h1>
 
-      <!-- Content -->
-      <p class="reveal"> <p/>
-    </section>
-    <div class="project">
-  <section class="project">
-  <section class="project">
-  <p> A responsive weather application that retrieves real-time weather data using the OpenWeather API. The app allows users to search for any city and instantly displays current weather conditions such as temperature, weather description, and location details.
+    <div class="project-layout">
+      <div class="project-description">
+        <p class="reveal">
+          A responsive weather application that retrieves real-time weather data using the <strong>OpenWeather API</strong>. 
+          The app allows users to search for any city and instantly displays current conditions like temperature and location details.
+        </p>
 
-The interface dynamically updates based on the API response, ensuring users always see accurate and up-to-date information. The project is deployed using GitHub Pages and runs entirely on the client side using JavaScript.
+        <h3 class="reveal"><span class="mark">🧠 Key Features</span></h3>
+        <ul class="feature-list reveal">
+          <li><strong>Real-time Data:</strong> Direct integration with OpenWeather API.</li>
+          <li><strong>Dynamic UI:</strong> Interface updates instantly based on search results.</li>
+          <li><strong>Responsive Design:</strong> Fully optimized for mobile, tablet, and desktop.</li>
+          <li><strong>Clean UX:</strong> Minimalist interface focused on speed and usability.</li>
+        </ul>
+      </div>
 
-🧠 Key features
-Real-time weather data using OpenWeather API
-Dynamic UI updates based on API responses
-City-based search functionality
-Responsive layout for different screen sizes
-Clean, minimal interface focused on usability
-Fully deployed via GitHub Pages
-⚙️ Tech used
+      <div class="project-stats reveal">
+        <h4>⚙️ Tech Stack</h4>
+        <div class="tag-container">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">REST API</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+      </div>
+    </div>
 
-HTML • CSS • JavaScript • REST API (OpenWeather) • GitHub Pages</p> 
-  
-    <h3> Real-Time Weather Dashboard 🌤️ </h3>
+    <div class="preview-header reveal">
+      <h3>Real-Time Weather Dashboard 🌤️</h3>
+      <p>Interact with the live app below:</p>
+    </div>
 
-  <iframe 
-    src="https://yassarchive.github.io/weather-app/"
-    width="100%"
-    height="500"
-    style="border-radius: 16px; border: none;">
-  </iframe>
-</section>
-</section>
-  </main>
+    <div class="iframe-wrapper reveal">
+      <iframe 
+        src="https://yassarchive.github.io/weather-app/" 
+        width="100%" 
+        height="600" 
+        style="border: none;">
+      </iframe>
+    </div>
+  </section>
+</main>
 
   <!-- Tiny, dependency-free JS -->
   <script>
